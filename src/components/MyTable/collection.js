@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react"
 import Axios from 'axios'
-import MyTable from './my_table'
 import Row from './row'
-
-import shuffle from '../../lib/shuffle'
+import Loading from '../loading'
 
 const Collection = () => {
     const [datas, setDatas] = useState([]) // state awal pake array []
+    const [loading, setLoading] = useState(true);
 
     const url = "https://nodejsherokupadma.herokuapp.com/dinusian"
 
@@ -17,14 +16,15 @@ const Collection = () => {
             url,
         })
         .then((response) => {
-          setDatas(shuffle(response.data['data']['results']))
+          setDatas(response.data['data']['results'])
+          setLoading(false);
         //   console.log(datas.length)
         })
     }, [])
     
     return (
         <tbody>
-            {datas.map( (data, i) => (<Row key={i} dinusian={data} />))}
+            {loading ? <Loading /> : datas.map( (data, i) => (<Row key={i} dinusian={data} />))}
         </tbody>
     )
 }
