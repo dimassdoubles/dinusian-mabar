@@ -1,10 +1,13 @@
 import './App.css';
-import HelloWorld from './components/hello_world';
+import MainLayout from './components/Layouts/main.layout';
+import MyTable from './components/MyTable/my_table';
 
 const App = () => {
   return (
     <>
-      <HelloWorld/>
+      <MainLayout>
+        <MyTable/>
+      </MainLayout>
     </>
   )
 }
