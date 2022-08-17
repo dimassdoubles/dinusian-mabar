@@ -8,10 +8,8 @@ const MyTable = ({children}) => {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                    <th>No</th>
                     <th>Nama</th>
                     <th>Role</th>
-                    <th>Program Studi</th>
                     </tr>
                 </thead>
                 <Collection/>
