@@ -3,6 +3,8 @@ import Axios from 'axios'
 import MyTable from './my_table'
 import Row from './row'
 
+import shuffle from '../../lib/shuffle'
+
 const Collection = () => {
     const [datas, setDatas] = useState([]) // state awal pake array []
 
@@ -15,7 +17,7 @@ const Collection = () => {
             url,
         })
         .then((response) => {
-          setDatas(response.data['data']['results'])
+          setDatas(shuffle(response.data['data']['results']))
         //   console.log(datas.length)
         })
     }, [])
