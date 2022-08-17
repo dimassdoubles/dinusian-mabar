@@ -9,7 +9,7 @@ const MyTable = ({children}) => {
                 <thead>
                     <tr>
                     <th>Nama</th>
-                    <th>Role</th>
+                    <th>Interest</th>
                     </tr>
                 </thead>
                 <Collection/>

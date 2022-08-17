@@ -3,10 +3,10 @@ import React from "react";
 export default () => {
     return (
         <React.Fragment>
-            <h1>DINUSIAN</h1>
+            <h1><b>DINUSIAN</b></h1>
             <h4>CREATE PROJECT <b>TOGETHER</b></h4>
             <h4>IMPROVE SKILL WITH OTHERS</h4>
-            <h4>WHO HAVE SAME HOBBY.</h4>
+            <h4>WHO HAVE SAME INTEREST</h4>
         </React.Fragment>
     )
 }
